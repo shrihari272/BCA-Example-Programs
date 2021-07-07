@@ -6,7 +6,7 @@ class test
     public:
            void getdata()
            {
-              cout<<"RUNING"<<endl; 
+              cout<<"RUNNING"<<endl; 
            }
         friend void display(test t);
 };
