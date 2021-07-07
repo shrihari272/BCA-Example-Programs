@@ -12,7 +12,7 @@ inline int cube(int x)
 int main()
 {
     int x,y,c;        
-    cout<<"Enter a 2 number to fint greater number : ";
+    cout<<"Enter a 2 number to find greater number : ";
     cin>>x>>y;
     cout<<"Greater number is : "<<function_name(x,y);
     cout<<endl<<"Enter a number to get cube : ";
