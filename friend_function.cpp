@@ -20,6 +20,7 @@ int main()
 }
 void display(test t)
 {
-    cout<<t.i<<endl;
-    cout<<t.j<<endl;
+    //Friend function can access private member of class
+    cout<<t.i<<endl;//Accessing private variable
+    cout<<t.j<<endl;//Accessing private variable
 }
