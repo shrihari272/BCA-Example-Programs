@@ -4,18 +4,13 @@ class test
 {
     int a;
     public:
-    test()
-    {
-        
-    }
     test(int z)
     {
       a = z;  
     }
     void operator -()//operator overloading 
     {
-        a = -a;
-       
+        a = -a; 
     }
     void display()
     {
