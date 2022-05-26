@@ -42,6 +42,12 @@ void main()
  line(x+80,y+80,x+80,y+110);
  //hand to fish
  line(x-200,y-15,x,y+95);
+ //crow1
+ arc(x-120,y-160,0,90,30);
+ arc(x-60,y-160,90,180,30);
+ //crow2
+ arc(x,y-100,0,90,30);
+ arc(x+60,y-100,90,180,30);
  getch();
  closegraph();
 }
