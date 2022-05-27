@@ -8,7 +8,7 @@ public class Sum_of_product {
 		n1 = sc.next();
 		System.out.println("Enter the value for num2 :");
 		n2 = sc.next();
-        sc.close();
+        	sc.close();
 		if(n1.length() == n2.length())
 		{
 			num1 = Integer.parseInt(n1);
