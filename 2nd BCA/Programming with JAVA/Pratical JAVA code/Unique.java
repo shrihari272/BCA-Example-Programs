@@ -53,9 +53,36 @@ public class Unique {
         }
         System.out.println("Unique");
 	}
+    void method3()
+    {
+        int num,temp,c,r;
+        System.out.println("Enter a number :");
+        num = sc.nextInt();
+        while(num != 0)
+        {
+            c = num % 10;
+            num /= 10;
+            temp = num;
+            while(temp != 0)
+            {
+                r = temp % 10;
+                if(c == r)
+                {
+                    System.out.println("Not unique");
+                    System.exit(0);
+                }
+                temp /= 10;
+            }
+        }
+        System.out.println("Unique");
+    }
     public static void main(String[] args) {
-        Unique uin = new Unique();
-        uin.method1();
-        uin.method2();
+        Unique uni = new Unique();
+        System.err.println("Using method 1 : ");
+        uni.method1();
+        System.err.println("Using method 2 : ");
+        uni.method2();
+        System.err.println("Using method 3 : ");
+        uni.method3();
     }       
 }
