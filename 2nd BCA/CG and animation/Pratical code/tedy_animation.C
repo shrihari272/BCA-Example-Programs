@@ -1,0 +1,107 @@
+#include<graphics.h>
+#include<conio.h>
+void tedy(int x,int y)
+{
+    setfillstyle(1,6);
+    ellipse(x,y,0,360,60,80);
+    floodfill(x,y,15);
+    //face
+    setfillstyle(1,5);
+    circle(x,y-130,50);
+    floodfill(x,y-130,15);
+    //ears
+    setfillstyle(1,9);
+    circle(x-61,y-180,30);
+    circle(x+61,y-180,30);
+    floodfill(x-61,y-180,15);
+    floodfill(x+61,y-180,15);
+    //legs
+    setfillstyle(1,4);
+    circle(x+50,y+80,20);
+    circle(x-50,y+80,20);
+    floodfill(x+50,y+80,15);
+    floodfill(x-50,y+80,15);
+}
+void main()
+{
+    int gd=DETECT,gm,x,y;
+    x = 319;
+    y = 290;
+    initgraph(&gd,&gm,"c://turboc3//bgi");
+   while(!kbhit())
+   {
+        tedy(x,y);
+        //eyes
+        ellipse(x+15,y-140,0,360,3,5);
+        ellipse(x-15,y-140,0,360,3,5);
+        setfillstyle(1,14);
+        floodfill(x+15,y-140,15);
+        floodfill(x-15,y-140,15);
+        //nose
+        line(x,y-121,x,y-129);
+        //mouth
+        arc(x,y-100,180,360,10);
+        delay(500);
+        cleardevice();
+        /*--------------Expression 1------------------*/
+        tedy(x,y);
+        //eyes
+        ellipse(x+15,y-140,0,360,2,3);
+        ellipse(x-15,y-140,0,360,2,3);
+        setfillstyle(1,14);
+        floodfill(x+15,y-140,15);
+        floodfill(x-15,y-140,15);
+        //nose
+        line(x,y-121,x,y-129);
+        //mouth
+        ellipse(x,y-100,180,360,10,5);
+        delay(500);
+        cleardevice();
+        /*--------------Expression 2-----------------*/
+        tedy(x,y);
+        //eyes
+        ellipse(x+15,y-140,0,360,1,3);
+        ellipse(x-15,y-140,0,360,1,3);
+        setfillstyle(1,14);
+        floodfill(x+15,y-140,15);
+        floodfill(x-15,y-140,15);
+        //nose
+        line(x,y-121,x,y-129);
+        //mouth
+        ellipse(x,y-100,180,360,10,0);
+        delay(500);
+        cleardevice();
+        /*---------------Expression 3------------------*/
+        tedy(x,y);
+        //eyes
+        ellipse(x+15,y-140,0,360,1,3);
+        ellipse(x-15,y-140,0,360,1,3);
+        setfillstyle(1,14);
+        floodfill(x+15,y-140,15);
+        floodfill(x-15,y-140,15);
+        line(x+15,y-135,x+15,y-132);
+        line(x-15,y-135,x-15,y-132);
+        //nose
+        line(x,y-121,x,y-129);
+        //mouth
+        ellipse(x,y-100,0,180,10,5);
+        delay(500);
+        cleardevice();
+        /*---------------Final----------------------*/
+        tedy(x,y);
+        //eyes
+        ellipse(x+15,y-140,0,360,0,5);
+        ellipse(x-15,y-140,0,360,0,5);
+        setfillstyle(1,14);
+        floodfill(x+15,y-140,15);
+        floodfill(x-15,y-140,15);
+        line(x+15,y-130,x+15,y-127);
+        line(x-15,y-130,x-15,y-127);
+        //nose
+        line(x,y-121,x,y-129);
+        //mouth
+        arc(x,y-100,0,180,10);
+        delay(500);
+        cleardevice();
+    }
+}
