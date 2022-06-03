@@ -3,33 +3,30 @@
 #include<math.h>
 void draw_line(float x1,float y1,float x2,float y2)
 {
-    float i,step,xi,yi,dx,dy,xn,yn;
-    dx = abs(x2-x1);
-    dy = abs(y2-y1);
-
-    if(dx >= dy)
-        step = dx;
+    float i,step,xi,yi,dx,dy;
+    if(x1 == x2 && y1 == y2)
+    {
+        printf("Invalid points");
+        getch();
+        exit(0);
+    }
+    
+    dx = x2 - x1;
+    dy = y2 - y1;
+    
+    if(abs(dx) >= abs(dy))
+        step = abs(dx);
     else
-        step = dy;
-
-    if(x1 < x2)
-        xn = x1;
-    else
-        xn = x2;
-
-    if(y1 < y2)
-        yn = y1;
-    else
-        yn = y2;
+        step = abs(dy);
 
     xi = dx / step;
     yi = dy / step;
 
     for(i=0;i<=step;i++)
     {
-        putpixel(xn,yn,15);
-        xn += xi;
-        yn += yi;
+        putpixel(x1,y1,15);
+        x1 += xi;
+        y1 += yi;
     }
 }
 void main()
